@@ -1,6 +1,6 @@
 /* CSS declarations go here */
 body{
-  font-family:"timenewromance",serif;
+  font-family:"GEORGIA",serif;
   text-align: center;
   color:#0f2342;
   background-color:blanchedalmond;
@@ -16,19 +16,34 @@ form{
   font-weight:lighter;
   font-family:"ariel",serif;
 }
-
+a {
+  color:grey;
+  text-decoration: none;
+}
 #conversationBox{
   height: 500px;
   width: 800px;
   background-color: #f9f5e8;
+  border-radius: 10px
+}
+#myMsg{
+  background-color: #ffe2b5;
+  border-radius: 4px
 }
 
-#myMsg{
-  background-color: #f8edff;
+#submitMsg, #resetMsg {
+  background-color: #f9f5e8;
+  font-family: sans-serif;
+  border-radius: 5px
 }
+
+#submitMsg:hover,#resetMsg:hover{
+  background-color: #e89920;
+}
+
 
 #intro{
-  margin: 10px 100px 10px 100px;
+  margin: 10px 200px 10px 200px;
   padding: 0px 20 0px 20px;
-  text-align: left;
+  text-align: center;
 }
