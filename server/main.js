@@ -6,10 +6,28 @@
 
 //把msgRecords的mongoDB資料庫連結到msgRecords這個伺服器端的Global Variable
 msgRecords = new Mongo.Collection("msgRecords"); //請勿變更此行
+var EngLexicon = new Mongo.Collection("EngLexicon")
 
 Meteor.startup(function(){
+/*
+  var str1 = "What is the weather in Taipei tomorrow?";
+  var str2 = "Is the weather going to be bad in Taipei";
+  var str3 = "I wonder what the temperature will be in Taipei tomorrow."
+
+  var regexpKeyword = /(weather|temperature).*in (\w+)/i;
+  //預設終止會搜尋到第一個，除非加了/g
+  //"i"去掉大小寫
+  //|or
+  //!!!!!!!!!!!!!!!!!!!!!!!""+代表出現1次含以上的字 "  "*"任一個或沒有
+  //大寫/\W代表不是一個字  小寫w代表是一個字 d代表只有數字
+  console.log("Str1: "+str1.match(regexpKeyword));
+  console.log("Str2: "+str2.match(regexpKeyword));
+  console.log("Str3: "+str3.match(regexpKeyword));
+  */
   //所有在程式啟動時會在伺服器執行的程式碼都會放在這裡
-});
+  //loadEnglexicon(EngLexicon);
+  }
+);
 
 //所有大腦(伺服器)的功能都會在這裡定義
 Meteor.methods({
@@ -42,17 +60,38 @@ Meteor.methods({
 //自訂的大腦功能函數，只能在伺服器內部呼叫。在這邊是由msgReceiver這個大腦功能呼叫
 //會接收到一個msg訊息並進行訊息運算與處理
 var processMsg = function(msg) {  //請勿變更此行
+
   //建立一個processResults變數儲存訊息運算處理的結果
   var processResults = "";  //請勿變更此行
   //「以下」是你可以編輯的部份，請將你的ELIZA處理訊息的核心程式碼放在以下的段落內
+  var emotion = "";
+  var msgWordsPOS = "";
 
-  //目前完全沒有訊息處理。所以processResults一定是空字串
-  //這邊在判斷processResults是空字串的時候會放進一個預設的訊息
+
+  emotion = emotionChecker(msg);
+  msgWordsPOS = posIdentifier(msg,EngLexicon);
+  processResults = socialResponse(msg);
+
   if(processResults === "")
   {
-    processResults = "Hello world!";
+    processResults = wordSearch(msg, EngLexicon);
   }
+  if(processResults === "")
+  {
+    processResults = posSearch(msg, EngLexicon);
+  }
+  if(processResults === "")
+  {
+    processResults =weatherInfo(msg);
+  }
+  //目前完全沒有訊息處理。所以processResults一定是空字串
+  //這邊在判斷processResults是空字串的時候會放進一個預設的訊息
 
+
+  if(processResults === "")
+  {
+    processResults = chooseRandomResponse(msg, msgWordsPOS, emotion, EngLexicon);
+  }
   //「以上」是你可以編輯的部份，請將你的ELIZA處理訊息的核心程式碼放在以上的段落內
 
   //在msgRecords資料庫放入運算訊息之後的結果，做為ELIZA的回應，請勿變更此行

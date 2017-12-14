@@ -1,1 +1,34 @@
 /* CSS declarations go here */
+body{
+  font-family:"timenewromance",serif;
+  text-align: center;
+  color:#0f2342;
+  background-color:blanchedalmond;
+}
+
+form{
+  font-family: fantasy;
+}
+
+.highlight{
+  color:grey;
+  background-color:#fffec6;
+  font-weight:lighter;
+  font-family:"ariel",serif;
+}
+
+#conversationBox{
+  height: 500px;
+  width: 800px;
+  background-color: #f9f5e8;
+}
+
+#myMsg{
+  background-color: #f8edff;
+}
+
+#intro{
+  margin: 10px 100px 10px 100px;
+  padding: 0px 20 0px 20px;
+  text-align: left;
+}

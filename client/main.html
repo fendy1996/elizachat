@@ -9,11 +9,14 @@
 </head>
 
 <body>
-  <center>
+
     <h1>This is my ELIZA!</h1>
+    <p id = intro>
+      <span class = "highlight"> Eliza, a 3-month-old chatbot that can chat with you</span>
+    </p>
     <form>
       <p>
-        <textarea id = "conversationBox" rows = "20" cols = "80" readOnly>{{allMsg}}</textarea>
+        <textarea id = "conversationBox" readOnly>{{allMsg}}</textarea>
       </p>
       <p>
         <input type = "text" id = "myMsg" size = "80" placeholder = "Enter Your Message" />
@@ -23,5 +26,5 @@
         <input type = "reset" id = "resetMsg" value = "Reset" />
       </p>
     </form>
-  </center>
+
 </body>
