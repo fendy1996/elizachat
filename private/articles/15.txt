@@ -1,0 +1,23 @@
+One of the most exciting things about machine learning is the opportunity that it affords creators to train software to build brand new works of art using artificial intelligence.
+
+While we often think of AI as only being good a grunt work, the future of this technology will see computers being used to perform all kinds of tasks, including breaking down and experimenting with traditional art, literature, painting, video games, and music.
+
+As evidence of the fact that this technology is progressing right now, a pair of musicians and programmers named CJ Carr and Zack Zukowski have completed a project that involved teaching a computer to compose black metal. The result is Coditany of Timeness, a five track album that was created by artificial intelligence - even if it was guided somewhat by humans who chose what data to feed into the program.
+
+The pair started by giving their AI software the 2011 album Diotima by a band named Krallice. The software broke down the album into chunks, which were fed into a neural network for analysis. Over time, the software slowly learned what made a "good" sound, and what wasn't in-keeping with the style of the original piece.
+
+While anyone not acquainted with black metal music might consider Coditany of Timeness to be anything more than a screeching noise, that's kind of the point with the initial sound of the genre. Under the surface, though, this music is incredibly complex and nuanced, so it's impressive that the computer was able to build an approximation of Diotima's style simply by listening, unpacking, and analyzing a single album.
+
+Generally, the more data that can be pumped into a deep learning AI, the more successful it will be at spotting patterns and trends. That Carr and Zukowski were able to get this level of sophistication out of giving the machine a single album, speaks volumes about the impressive ability of the software to mimic its reference material.
+
+There are some questions surrounding ownership the artwork that's produced by this process. If an artificial intelligence does all the heavy lifting, who gets the credit for this work: should the computer be granted ownership of its own ideas, or are its programmers responsible as they built the tool that composed the music? Or, should Krallice get the credit, as this new album was created by stripping down, re-organizing and synthesizing answers to their work?
+
+Certainly, the album couldn't exist in its current form without all the parties involved. The reason why Coditany of Timeness follows the conventions of its genre is because Carr and Zukowksi guided their AI in its learning process, helping it to understand what did and didn't count as black metal music.
+
+While creators may feel antsy about the oncoming rise of AI, it's important to note that these machines don't simply berth ideas from nothingness, inspired by their own initiative to create something that speaks to their metal souls. Humans are able to use deep learning to compose masterpieces, but computers are, as they've ever been, merely tools that facilitate the creative process and shift the skill set that a creator needs to possess in order to produce something.
+
+It's also important to note that human musicians aren't about to become obsolete any time soon. At present, AI software can mimic the style of Krallice, but it can't push beyond the boundaries of its reference material. Different programmers have tried using AI to compose music in other genres, but their successes were also limited.
+
+Computers are great at spotting and replicating patterns, but they're less good at thinking outside the box and creating variations on a theme that aren't decided purely by an informal analysis of formulae. An AI can't willfully subvert a trend, and it takes a human brain to think outside the box and produce anything that isn't, by its very nature, entirely derivative.
+
+Robots aren't about to supplant human creators just yet. They will, however, become an increasingly popular tool for taking some of the stresses away from the creative process, as both the physical and the mental workload that a musician goes through can now be shouldered at least in part by a helpful robot buddy. 

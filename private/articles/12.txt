@@ -1,0 +1,21 @@
+Like nearly everything in the world of technology, virtual and augmented reality are on a crash course with artificial intelligence. Here are some things that may unfold over the next few years, and what it means for marketers as they implement tech into their customer service.
+AI will not replace humans—yet
+
+Despite amazing advances over the last few years, AI needs to get a lot better before it can stand in for humans, said Michael Ludden, director of product for IBM Watson Developer Labs and AR/VR Labs.
+Consumers can interact with virtual sales agents today, for example, but these conversations largely consist of preprogrammed responses that vary depending on your input.
+“I think we are still very far from a programmatically generated, smart virtual agent that could consistently present a good experience to customers without freaking them out,” Ludden said. “I almost feel like we need the singularity to occur before we have conversations with machines that convincingly and consistently approximate human-level interactions, especially across multiple topics.”
+AR and VR will converge
+
+While VR still requires expensive and bulky equipment limiting its adoption, AR has already arrived on the new iPhone and Android operating systems. It will rapidly become a popular feature on phones, noted Fred Schonenberg, CEO of VentureFuel.
+“In two years it’s going to become second nature to hold your phone up to a billboard and expect it to give you more information, or to roll your phone over an orange to see what citrus grove it came from,” Schonenberg said.
+Eventually, however, VR and AR will converge and be used interchangeably on the same devices, said Brian Blau, research vp at Gartner.
+“In five to 10 years you’ll have a device that lets you move seamlessly between AR and VR,” he said. “You can already almost see it in some of the products on the market today.”
+VR will be like Google Analytics for your brain
+
+One of the key benefits for marketers is how much useful consumer data immersive environments can generate.
+Today, companies like Retinad build heat maps that display exactly where a person’s gaze has landed and how long it has lingered inside a virtual environment. In the future, AI-powered apps will use that information to personalize the experience, said Michael Schaiman, svp for digital experience design studio Helios Interactive.
+“Right now, tracking is released as a report that says, ‘Hey, Mike went through this experience and looked at these things,’” he explained. “A year or two from now, it’s going to be ‘There were four BMWs on screen, and Mike looked at the M5 for 32 seconds and the M3 for 12 seconds.’ In about five years, the AI in the app will know that I’ve been looking at the M5 and branch into purely M5 stuff. It’s going to be incredibly personalized, and you can get to the point where no two people will experience content the same way.”
+Content is crucial
+
+While there’s a fair amount of VR gaming content available, there are precious few other immersive apps. This classic chicken-and-egg problem could limit demand and slow the growth of the virtual ecosystem.
+“Immersive computing is going to change the way we entertain, educate, communicate and share,” said Steve Raymond, CEO of holographic design firm 8i. “But unlike all previous forms of media that have been digitized, there’s no library of content. When the Kindle launched, you had every book. When Netflix launched, you had all of the movies … with Hulu, television. But with immersive 3-D content, there is no Citizen Kane. So we have to make it.”

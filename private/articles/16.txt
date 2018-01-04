@@ -1,0 +1,18 @@
+As advances in artificial intelligence grow, companies are looking for new applications and fields to apply the technology. One whimsical output sees Google applying AI to creating food and more topically baking cookies. Fortunately, all are able to benefit from this “advancement” with the company publishing the recipe.
+
+
+
+
+
+
+
+
+
+
+In a blog post, Google notes that it has a small research team based in Pittsburgh working on applying artificial intelligence to experimental design.
+To test the technology out, the team set out to design “the best possible chocolate chip cookies using a given set of ingredients.”
+Using Bayesian Optimization, the team inputed ingredients — or “knobs” — found in a cookie recipe. The system then created a recipe which the team baked and tasted to provide a “numerical score relative to store-bought cookie samples.”
+We fed that rating back into the system, which learned from the rating and adjusted those “knobs” to create a new recipe. We did this dozens of times—baking, rating, and feeding it back in for a new recipe—and pretty soon the system got much better at creating tasty recipes.
+Afterwards, the team introduced the system to their in-house chef and a local baker:
+Working out of the Goat Bakery kitchen, Chef John and Jeanette mixed and matched some unusual ingredients like cardamom and szechuan pepper, using the measurements provided by Google’s system.
+Over the span of two months, the duo and AI created 59 batches that experimented with ingredients like cardamom and szechuan pepper before arriving at “a new take on the classic chocolate chip cookie: The Chocolate Chip and Cardamom Cookie.”

@@ -1,3 +1,94 @@
+produceAIArticle= function(msg){
+  var AIMsgRegExp = /(what|how|tell me).* AI/ig;
+
+  if(msg.match(AIMsgRegExp) !== null)
+  {
+    return generateRandomAIArticle();
+  }
+  else
+  {
+  return"";
+  }
+};
+
+var generateRandomAIArticle = function(){
+  var randomAIArticle = "", nGramNum = 100;
+  var allInitialTrigram = nGramDB.find({trigram1: "#"}).fetch();
+//fetch轉[]
+  var InitialTrigram = randomNGramSelection(allInitialTrigram);
+ randomAIArticle =
+ InitialTrigram.trigram1+" "+ InitialTrigram.trigram2+" "+
+ InitialTrigram.trigram3+" ";
+
+var newNGram1 = InitialTrigram.trigram2;
+var newNGram2 = InitialTrigram.trigram3;
+//往前移
+var selectedNewNGram;
+
+for (wd=1 ; wd<= nGramNum ; wd++)
+{
+  var trigramMatches = nGramDB.find({trigram1:newNGram1,trigram2:newNGram2}).fetch();
+  if(trigramMatches.length > 0)
+  {
+    selectedNewNGram = randomNGramSelection(trigramMatches);
+    randomAIArticle =  randomAIArticle + selectedNewNGram.trigram3+" ",
+    newNGram1 = newNGram2
+    newNGram2 = selectedNewNGram.trigram3;
+  }
+  else
+  //如果trigram maath不到 開始用bigram
+  {
+    // 用上一個trigram裡面的最後一筆資料newNGram2來match
+    var bigramMatches = nGramDB.find({bigram1: newNGram2}).fetch();
+    if(bigramMatches.length > 0)
+    {
+      selectedNewNGram = randomNGramSelection(bigramMatches);
+      randomAIArticle =  randomAIArticle + selectedNewNGram.bigram2+" ";
+      newNGram1 = newNGram2
+      newNGram2 = selectedNewNGram.bigram2;
+    }
+    else
+    {
+      var monogramMatches = nGramDB.find({type: "monogram"}).fetch();
+      selectedNewNGram = randomNGramSelection(monogramMatches);
+      randomAIArticle =  randomAIArticle + selectedNewNGram.monogram+" ";
+      newNGram1 = newNGram2 //新的ngram1=舊的2
+      newNGram2 = selectedNewNGram.monogram;
+    }
+  }
+}
+ var trigramMatches = nGramDB.find({trigram1: newNGram2, trigram3: "#"});
+ if(trigramMatches.length > 0)
+ {
+   selectedNewNGram = randomNGramSelection(trigramMatches);
+   randomAIArticle =  randomAIArticle + selectedNewNGram.trigram2+" #";
+   //收尾囉 trigram是唯一新資訊
+ }
+ else
+ {
+   randomAIArticle =  randomAIArticle + " #";
+ }
+ return randomAIArticle;
+};
+
+var randomNGramSelection = function(NGrams){
+  var totalRawFreq = 0;
+  for(NGram= 0 ;  NGram<NGrams.length ; NGram ++){
+    totalRawFreq = totalRawFreq+NGrams[NGram].rawFreq;
+  }
+  var randomNum = Math.random()*totalRawFreq;
+  totalRawFreq = 0;
+  //記得歸零先
+  for (newNGram = 0 ; newNGram< NGrams.length ; newNGram ++)
+  {
+    totalRawFreq = totalRawFreq+NGrams[newNGram].rawFreq;
+    if(totalRawFreq >randomNum)
+    {
+      return  NGrams[newNGram];
+    }
+  }
+ };
+
 loadTrainingData = function(){
   nGramDB.remove({});
   nGramDB.insert({type:"monogramFreq",totalFreq: 0});
@@ -7,7 +98,7 @@ loadTrainingData = function(){
   var filename = "", articleString = "";
 
 
-  for(fileNum = 1; fileNum<= 10 ; fileNum++)
+  for(fileNum = 1; fileNum<= 21 ; fileNum++)
   {
    filename = fileNum + ".txt";
    articleString = Assets.getText("articles/"+filename)

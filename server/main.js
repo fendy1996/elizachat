@@ -90,7 +90,10 @@ var processMsg = function(msg) {  //請勿變更此行
   }
   //目前完全沒有訊息處理。所以processResults一定是空字串
   //這邊在判斷processResults是空字串的時候會放進一個預設的訊息
-
+ if (processResults === "")
+ {
+   processResults = produceAIArticle(msg);
+ }
 
   if(processResults === "")
   {
